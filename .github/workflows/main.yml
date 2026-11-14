@@ -19,7 +19,7 @@ jobs:
         run: pip install pystray pillow pyinstaller
 
       - name: Build exe
-        run: pyinstaller --onefile --noconsole --hidden-import pystray._win32 --name server server.py
+        run: pyinstaller --onefile --noconsole --hidden-import pystray._win32 --name server main.py
 
       - uses: actions/upload-artifact@v4
         with:
