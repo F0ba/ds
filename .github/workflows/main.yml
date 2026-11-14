@@ -14,10 +14,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
 
       - name: Install deps
-        run: pip install -r requirements.txt
+        run: pip install pystray pillow pyinstaller
 
       - name: Build exe
         run: pyinstaller --onefile --noconsole --hidden-import pystray._win32 --name server server.py
